@@ -4,7 +4,7 @@ This Chrome extension allows users to track sites that they want to revisit in t
 
 ## Usage
 
-Users can both input their own URLs or, more conveniently, save the URL of their current tab. Double clicking the **"DELETE ALL"** button clears the current list of saved URLs.
+Users can both input their own URLs or, more conveniently, save the URL of their current tab. Double clicking the **DELETE ALL** button clears the current list of saved URLs.
 
 ## Technologies
 
