@@ -4,7 +4,7 @@ This Chrome extension allows users to save sites that they want to revisit in th
 
 ## Usage
 
-Users can both input their own URLs or, more conveniently, save the URL of their current tab. Double clicking the **DELETE ALL** button clears the current list of saved URLs.
+Users can both input their own URLs or, more conveniently, save the URL of their current tab. Double clicking the **DELETE ALL** button clears the current list of saved URLs. This tool is more convenient when compared to bookmarking a URL since these links are designed to be stored temporarily.
 
 ## Technologies
 
