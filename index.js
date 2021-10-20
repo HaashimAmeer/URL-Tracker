@@ -13,7 +13,19 @@ const deleteBtn = document.getElementById("delete-btn");
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
-  renderLeads();
+  render(myLeads);
+}
+
+//refactored to render whatever array
+function render(leads) {
+  let listItems = "";
+  for (let i = 0; i < leads.length; i++) {
+    listItems += `
+    <li> 
+        <a target='_blank' href='${leads[i]}'> ${leads[i]}</a>
+    </li>`;
+  }
+  ulEl.innerHTML = listItems;
 }
 
 //functions/event listeners
@@ -21,23 +33,12 @@ saveBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value); //adds values to array which contains each URL
   inputEl.value = "";
   localStorage.setItem("myLeads", JSON.stringify(myLeads)); //since localStorage only handles k/v pairs of strings, need to use JSON.stringify to convert array to string form
-  renderLeads();
+  render(myLeads);
 });
 
 //takes care of deleting values in localStorage, array within program, and clearing DOM
 deleteBtn.addEventListener("dblclick", function () {
   localStorage.clear();
   myLeads.splice(0, myLeads.length);
-  renderLeads();
+  render(myLeads);
 });
-
-function renderLeads() {
-  let listItems = "";
-  for (let i = 0; i < myLeads.length; i++) {
-    listItems += `
-    <li> 
-        <a target='_blank' href='${myLeads[i]}'> ${myLeads[i]}</a>
-    </li>`;
-  }
-  ulEl.innerHTML = listItems;
-}
