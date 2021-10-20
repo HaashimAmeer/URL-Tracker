@@ -8,7 +8,6 @@ const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
 const deleteBtn = document.getElementById("delete-btn");
 const saveTabBtn = document.getElementById("saveTab-btn");
-const tabs = [{ url: "https://www.linkedin.com/in/haashameer/" }];
 
 //handling any existing keys
 //var stores an array // grabbed from localStorage as string and parsed by JSON
@@ -38,7 +37,11 @@ saveBtn.addEventListener("click", function () {
 });
 
 saveTabBtn.addEventListener("click", function () {
-  console.log(tabs[0].url);
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render(myLeads);
+  });
 });
 
 //takes care of deleting values in localStorage, array within program, and clearing DOM
