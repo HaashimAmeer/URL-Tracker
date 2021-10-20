@@ -10,9 +10,14 @@ const ulEl = document.getElementById("ul-el");
 //functions/event listeners
 saveBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
+  renderLeads();
 });
 
-//render function needed (implementation below)
-for (let i = 0; i < myLeads.length; i++) {
-  ulEl.innerHTML += "<li>" + myLeads[i] + "</li>";
+function renderLeads() {
+  let listItems = "";
+  for (let i = 0; i < myLeads.length; i++) {
+    listItems += "<li>" + myLeads[i] + "</li>";
+  }
+
+  ulEl.innerHTML = listItems;
 }
