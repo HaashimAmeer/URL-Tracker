@@ -10,13 +10,21 @@ const ulEl = document.getElementById("ul-el");
 //functions/event listeners
 saveBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
+  inputEl.value = "";
   renderLeads();
 });
 
 function renderLeads() {
   let listItems = "";
+  let a = document.createElement("a");
+
   for (let i = 0; i < myLeads.length; i++) {
-    listItems += "<li>" + myLeads[i] + "</li>";
+    listItems +=
+      "<li> <a target='_blank' href=' " +
+      myLeads +
+      "'>" +
+      myLeads[i] +
+      "</a></li>";
   }
 
   ulEl.innerHTML = listItems;
