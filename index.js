@@ -1,22 +1,46 @@
-//variables for program
-let myLeads = [];
+let myLeads = []; //array of strings that stores all URLs
 
-//references to HTML element
-//set to const since these variables won't be reassigned later in program
-const saveBtn = document.getElementById("save-btn"); //refers to save
+//references to HTML elements || set to const type since these variables won't be reassigned later in program
+const saveBtn = document.getElementById("save-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
 const deleteBtn = document.getElementById("delete-btn");
 const saveTabBtn = document.getElementById("saveTab-btn");
 
 //handling any existing keys
-//var stores an array // grabbed from localStorage as string and parsed by JSON
+//variable stores the array (initially grabbed from localStorage as string and parsed by JSON)
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
   render(myLeads);
 }
 
+//saves & renders an inputted URL
+saveBtn.addEventListener("click", function () {
+  myLeads.push(inputEl.value); //adds input value to arrray
+  inputEl.value = ""; //resets input value
+  localStorage.setItem("myLeads", JSON.stringify(myLeads)); //resets existing k/v pair with new string that contains newly added URL
+  render(myLeads); //renders new URL on screen
+});
+
+//saves & renders current tab's URL
+saveTabBtn.addEventListener("click", function () {
+  //works with Chrome API to determine current tab URL & adds as new URL
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render(myLeads);
+  });
+});
+
+//deletes values in localStorage, myLeads[], and clears DOM
+deleteBtn.addEventListener("dblclick", function () {
+  localStorage.clear();
+  myLeads.splice(0, myLeads.length);
+  render(myLeads);
+});
+
+//renders all URLs in array to DOM
 function render(leads) {
   let listItems = "";
   for (let i = 0; i < leads.length; i++) {
@@ -27,26 +51,3 @@ function render(leads) {
   }
   ulEl.innerHTML = listItems;
 }
-
-//functions/event listeners
-saveBtn.addEventListener("click", function () {
-  myLeads.push(inputEl.value); //adds values to array which contains each URL
-  inputEl.value = "";
-  localStorage.setItem("myLeads", JSON.stringify(myLeads)); //since localStorage only handles k/v pairs of strings, need to use JSON.stringify to convert array to string form
-  render(myLeads);
-});
-
-saveTabBtn.addEventListener("click", function () {
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    myLeads.push(tabs[0].url);
-    localStorage.setItem("myLeads", JSON.stringify(myLeads));
-    render(myLeads);
-  });
-});
-
-//takes care of deleting values in localStorage, array within program, and clearing DOM
-deleteBtn.addEventListener("dblclick", function () {
-  localStorage.clear();
-  myLeads.splice(0, myLeads.length);
-  render(myLeads);
-});
