@@ -1,6 +1,6 @@
 # URL Tracker
 
-This Chrome extension allows users to save sites that they want to revisit in the future. This tool is more convenient when compared to bookmarking a URL since these links are designed to be stored temporarily. Use cases include compiling a shopping list or saving LinkedIn profiles.
+This Chrome extension allows users to save sites that they want to revisit in the future. This tool is more convenient when compared to bookmarking a URL since these links are designed to be stored temporarily. Use cases include saving LinkedIn profiles for future contact or adding Amazon links to a shopping list.
 
 ## Usage
 
