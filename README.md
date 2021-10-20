@@ -24,7 +24,7 @@ This project was developed with the help of a [tutorial](https://www.youtube.com
 
 ## Suggestions
 
-While this is a v1 project, I'd love to hear suggestions for features to add! Please contact me at [my LinkedIn](https://www.linkedin.com/in/haashameer/) to chat.
+While this is a v1 project, I'd love to hear suggestions for features to add! Please contact me via [LinkedIn](https://www.linkedin.com/in/haashameer/) or [email](hameer@seattleu.edu) to chat.
 
 ### Support
 
