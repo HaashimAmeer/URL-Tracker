@@ -10,7 +10,7 @@ This project is written with HTML5, CSS3, and JavaScript ES6. It utilizes the [c
 
 1. Download the zipped version of this repository - navigate to Code section (found on top right of page).
 2. Unzip folder in a directory that is not prone for accidental deletion.
-3. On Chrome, navigate to `chrome://extensions` & toggle developer mode
+3. On Chrome, navigate to `chrome://extensions` in address bar & toggle developer mode
 4. Click `load unpacked` button on top left of page & select folder that contains the source code for the extension.
 5. Extension should load into browser - be sure to pin extension for easy access.
 
