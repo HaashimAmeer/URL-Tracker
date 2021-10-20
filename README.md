@@ -22,4 +22,11 @@ This project is written with HTML5, CSS3, and JavaScript ES6. It utilizes the [c
 
 This project was developed with the help of a [tutorial](https://www.youtube.com/watch?v=jS4aFq5-91M) created by Scrimba's Per Harald Borgen.
 
+## Support
+
+If like this projectand would like to support a broke college kid, I'd really appreciate if you could buy me a coffee!
+<a href="https://www.buymeacoffee.com/haashimameer" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="haashimameer" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+
 **Enjoy!**
