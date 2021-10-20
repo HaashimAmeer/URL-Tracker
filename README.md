@@ -22,7 +22,7 @@ This project is written with HTML5, CSS3, and JavaScript ES6. It utilizes the [c
 
 This project was developed with the help of a [tutorial](https://www.youtube.com/watch?v=jS4aFq5-91M) created by Scrimba's Per Harald Borgen.
 
-## Next Steps & Suggestions
+## Suggestions
 
 While this is a v1 project, I'd love to hear suggestions for features to add! Please contact me at [my LinkedIn](https://www.linkedin.com/in/haashameer/) to chat.
 
