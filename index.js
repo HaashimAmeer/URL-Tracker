@@ -7,6 +7,8 @@ const saveBtn = document.getElementById("save-btn"); //refers to save
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
 const deleteBtn = document.getElementById("delete-btn");
+const saveTabBtn = document.getElementById("saveTab-btn");
+const tabs = [{ url: "https://www.linkedin.com/in/haashameer/" }];
 
 //handling any existing keys
 //var stores an array // grabbed from localStorage as string and parsed by JSON
@@ -16,7 +18,6 @@ if (leadsFromLocalStorage) {
   render(myLeads);
 }
 
-//refactored to render whatever array
 function render(leads) {
   let listItems = "";
   for (let i = 0; i < leads.length; i++) {
@@ -34,6 +35,10 @@ saveBtn.addEventListener("click", function () {
   inputEl.value = "";
   localStorage.setItem("myLeads", JSON.stringify(myLeads)); //since localStorage only handles k/v pairs of strings, need to use JSON.stringify to convert array to string form
   render(myLeads);
+});
+
+saveTabBtn.addEventListener("click", function () {
+  console.log(tabs[0].url);
 });
 
 //takes care of deleting values in localStorage, array within program, and clearing DOM
