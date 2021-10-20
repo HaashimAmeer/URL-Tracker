@@ -24,6 +24,6 @@ This project was developed with the help of a [tutorial](https://www.youtube.com
 
 ## Support
 
-If like this project and would like to support me as I continue to explore new technologies, I'd really appreciate if you could buy me a coffee!
+If you like this project and would like to support me as I continue to explore new technologies, I'd really appreciate if you could buy me a coffee! My next step is learning React.js :)
 
 <a href="https://www.buymeacoffee.com/haashimameer" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
