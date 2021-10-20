@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  min-width: 400px; /* minimum width of extension when opened in a browser */
 }
 
 input {
@@ -19,15 +20,16 @@ input:focus-within {
 }
 
 button {
-  background-color: #5f9341;
+  background: #5f9341;
   color: white;
   font-weight: bold;
   padding: 10px 20px;
   margin-top: 5px;
-  border-style: hidden;
+  border: none;
 }
 
 ul {
+  margin-top: 20px;
   list-style: none;
   padding-left: 0;
 }
